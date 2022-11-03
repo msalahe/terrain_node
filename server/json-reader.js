@@ -6,7 +6,7 @@ class JSONReader {
   constructor(){
 
   }
-  async read(source){
+   read(source){
     return new Promise((resolve,reject) =>{
          fs.readFile(source,"utf-8",(err,data)=>{
              if(err){

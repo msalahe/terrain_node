@@ -2,10 +2,11 @@ class TerrainsService{
     constructor(terrainDao){
        this.terrainDao = terrainDao;
     }
-    async list(){
+     async list(){
         let listTerrain  = await this.terrainDao.list();
-        console.log(listTerrain);
-       return listTerrain;
+        return listTerrain;
+    
+       
     }
 }
 

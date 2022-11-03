@@ -4,7 +4,9 @@ const TerrainsService = require("../../services/terrains-service");
 let routes = new Router();
 let terrainService = new TerrainsService(terrainDao);
 routes.get("/",(req,res) => {
-   res.send(terrainService.list());
+   let data = terrainService.list();
+   data.then(result => res.send(result));
+
 });
 
 module.exports = routes;
