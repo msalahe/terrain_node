@@ -6,10 +6,10 @@ class TerrainDao{
     }
     async list(){
     let jr = new JSONReader();
-      await jr.read("C:/Users/Public/ws_node/services_list_terrain/terrain.json")
-     .then((data) => {
+       let data = await jr.read("C:/Users/Public/ws_node/services_list_terrain/terrain.json");
+   
         return data;
-     }).catch((err) => console.log(err));
+     
     }
 }
 let terrainDao = new TerrainDao();
